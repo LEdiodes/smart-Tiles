@@ -1,7 +1,7 @@
 /* BEGIN CUSTOM CSS */
 /* Main Tile Parts */
-.title {color: #32CD32;} /* Title is the text at the top of the tiles */
-.footer {color: #32CD32;} /* Footer is the text at the bottom of the tiles and includes the thermometer icon for Temperature tiles */
+.title {color: LIME;} /* Title is the text at the top of the tiles */
+.footer {color: LIME;} /* Footer is the text at the bottom of the tiles and includes the thermometer icon for Temperature tiles */
  
 /* Pop-Up Menus */
 .ui-li-static {
@@ -12,10 +12,10 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 /* Modes using Font Awesome */
 /* Although all you see is a box here, this is actually a Font Awesome icon. You can put any Font Awesome icon from the cheatsheet in here and have it displayed. It goes in between the 2 sets of double quotes. */
 .icon.Home i::before {content: " ";} 
-.icon.Away i::before {content: " Away";}
-.icon.Night i::before {content: " Night";}
+.icon.Away i::before {content: " ";}
+.icon.Night i::before {content: " ";}
 .mode.Away .fa {color: Green;} /* This will change the color for your Font Awesome icons. You can change it per mode. */
-.mode.Home .fa {color: Black;}
+.mode.Home .fa {color: LIME;}
 .mode.Night .fa {color: Black;}
  
 /* Modes using Custom Pic URLs */
@@ -26,13 +26,13 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 /* Non-specific tile changes. Note: These will change ALL tiles of that type. Look further down to find out how to change specific individual tiles of a certain type. You can add the code for content to any of these items and it will change the content for ALL devices of that specific type. My example will have it only for Other Dashboards. I will also have an example on the Presence sensor tile showing you can have one type of content for Active and a different for Inactive. */
  
 /* Change Title Color When Active */
-.switch.tile.active .title { color: red;}  /*This will change the Title on the given tile type to the color specified only when active. This could be used with other tile types that show On/Off or Active/Inactive such as lights, dimmerlights, dimmers, motion, power meters, etc. */
+.switch.tile.active .title { color: lime;}  /*This will change the Title on the given tile type to the color specified only when active. This could be used with other tile types that show On/Off or Active/Inactive such as lights, dimmerlights, dimmers, motion, power meters, etc. */
  
 /* Power Meters */
-.power .icon {color: #D7A22A;} /* Although this says icon, by default this is the text in the center of the power meter tile. */
-.power .fa {color: #D7A22A;} /* This will change the color of the Font Awesome icon (lightning bolt) for your power meters. */
-.power.inactive {background-color:green;} /* This will set the background color of any Active power meter to the color specified. */
-.power[data-value='0W'] {background-color: white;} /* This will set the background color of any power meter that has a data value of 0W (inactive) to the color specified. */
+.power .icon {color: lime;} /* Although this says icon, by default this is the text in the center of the power meter tile. */
+.power .fa {color: lime;} /* This will change the color of the Font Awesome icon (lightning bolt) for your power meters. */
+.power.inactive {background-color:#2C3937;} /* This will set the background color of any Active power meter to the color specified. */
+.power[data-value='0W'] {background-color: black;} /* This will set the background color of any power meter that has a data value of 0W (inactive) to the color specified. */
  
 /* Energy Meters */
 .tile.energy {background-color: white;} /* This will set the background color for all energy meter tiles to the specified color. */
@@ -40,29 +40,30 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .energy .fa {color: #D7A22A;} /* This will change the color of the Font Awesome icon (double lightning bolt) for your energy meter tiles. */
  
 /* Other Dashboards */
-.tile.dashboard {background-color: white;} /* This will change the background color for other Linked Dashboards. */
-.tile.dashboard .fa {color: black;} /* This will change the Font Awesome icon color for other Linked Dashboards. */
+.tile.dashboard {background-color: black;} /* This will change the background color for other Linked Dashboards. */
+.tile.dashboard .fa {color: LIME;} /* This will change the Font Awesome icon color for other Linked Dashboards. */
  
 /* Routines */
-.hello-home .icon {color: #006778;} /* This will change the background color for Routines (formerly called Hello-Home phrases). */
-.hello-home .fa {color: #006778;} /* This will change the icon color for Routines. */
+.hello-home .icon {color: black;} /* This will change the background color for Routines (formerly called Hello-Home phrases). */
+.hello-home .fa {color: LIME;} /* This will change the icon color for Routines. */
+.hello-home.inactive {background-color: LIME;}
  
 /* Link */
 .tile.link {background-color: white;} /* This will change the background color for external weblinks. */
-.link .icon {color: #32cd32;} /* This will change the icon color for external weblinks. */
+.link .icon {color: LIME;} /* This will change the icon color for external weblinks. */
  
 /* Refresh */
 .tile.refresh {background-color: black;} /* This will change the background color for the Refresh tile. */
-.refresh .icon {color: #32cd32;} /* This will change the icon color for the Refresh tile. */
-.refresh .fa {color: #32cd32;} /* This will change the Font Awesome icon color for the Refresh tile. */
+.refresh .icon {color: LIME;} /* This will change the icon color for the Refresh tile. */
+.refresh .fa {color: LIME;} /* This will change the Font Awesome icon color for the Refresh tile. */
  
 /* Clock */
 .tile.clock {background-color: black;} /* This will change the background color for the Clock tile. */
-.clock .icon {color: #32cd32;} /* This will change the icon color for the Clock tile. */
+.clock .icon {color: LIME;} /* This will change the icon color for the Clock tile. */
  
 /* History */
 .tile.history {background-color: Black;} /* This will change the background color for the Event History tile. */
-.history .icon {color: #32cd32;} /* This will change the icon color for the Event History tile. */
+.history .icon {color: LIME;} /* This will change the icon color for the Event History tile. */
  
 /* Weather - Basic. For more advanced weather control, please scroll down. */
 .tile.weather {background-color: white;} /* This will change the background color for a Smartweather Tile. */
@@ -71,46 +72,46 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
  
 /* Camera */
 .tile.camera {background-color: black;} /* This will change the background color for Camera tiles. Note that this is NOT for video cameras, but for cameras that can take a still photo when the tile is pressed. */
-.camera .icon {color: #32cd32;} /* This will change the icon color for Camera tiles. */
+.camera .icon {color: LIME;} /* This will change the icon color for Camera tiles. */
  
 /* Temperature */
 .tile.temperature {background-color: black;} /* This will change the icon color for Temperature sensor tiles. Further down is a guide for changing the color of the text based on the data value (temperature display). */
  
 /* Smart Home Monitor */
-.tile.alarm {background-color: white;} /* This will change the background color for Smart Home Monitor. */
+.tile.alarm {background-color: black;} /* This will change the background color for Smart Home Monitor. */
 .alarm[data-status="away"] .icon i.active:before {color: #FF0000;}     /* This will change the icon color for Armed (Away) mode. */
 .alarm[data-status="stay"] .icon i.active:before {color: blue;}        /* This will change the icon color for Armed (Stay) mode. */
-.alarm[data-status="off"] .icon i.inactive:before {color: #32CD32;}    /* This will change the icon color for Disarmed mode. */
+.alarm[data-status="off"] .icon i.inactive:before {color: LIME;}    /* This will change the icon color for Disarmed mode. */
  
 /* Contact Sensors */
-.tile.contact {background-color: white;} /* This will change the background color for all Contact Sensor tiles (Open/Close Door and Window Sensors). */
-.contact .icon i.active:before {color: #000000;} /* This will change the icon color for Active (Open) Contact Sensor tiles. */
-.contact .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Closed) Contact Sensor tiles. */
+.tile.contact {background-color: Black;} /* This will change the background color for all Contact Sensor tiles (Open/Close Door and Window Sensors). */
+.contact .icon i.active:before {color: LIME;} /* This will change the icon color for Active (Open) Contact Sensor tiles. */
+.contact .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Closed) Contact Sensor tiles. */
  
 /* Motion Sensors */
-.tile.motion {background-color: white;} /* This will change the background color for Motion Sensor tiles. */
-.motion .icon i.active:before {color: #006778;} /* This will change the icon color for Active (Motion Active) Motion Sensor tiles. */
-.motion .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Motion Inactive) Motion Sensor tiles. */
+.tile.motion {background-color: black;} /* This will change the background color for Motion Sensor tiles. */
+.motion .icon i.active:before {color: LIME;} /* This will change the icon color for Active (Motion Active) Motion Sensor tiles. */
+.motion .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Motion Inactive) Motion Sensor tiles. */
  
 /* Accelerometers */
-.tile.acceleration {background-color: white;} /* This will change the background color for Accelerometer (Vibration) sensor tiles. */
-.acceleration .icon i.active:before {color: #006778;} /* This will change the icon color for Active (Vibration detected) Accelerometer sensor tiles. */
-.acceleration .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Vibration not detected) Accelerometer sensor tiles. */
+.tile.acceleration {background-color: black;} /* This will change the background color for Accelerometer (Vibration) sensor tiles. */
+.acceleration .icon i.active:before {color: LIME;} /* This will change the icon color for Active (Vibration detected) Accelerometer sensor tiles. */
+.acceleration .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Vibration not detected) Accelerometer sensor tiles. */
  
 /* Lights */
 .tile.light {background-color: black;} /* This will change the background color for Light tiles. */
-.light .icon i.active:before {color: #32CD32;} /* This will change the icon color for Active (On) Light tiles. */
+.light .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Light tiles. */
 .light .icon i.inactive:before {color: #FFFFFF;} /* This will change the icon color for Inactive (Off) Light tiles. */
  
 /* Switches */
 .tile.switch {background-color: black;} /* This will change the background color for Switch tiles. */
-.switch .icon i.active:before {color: #32cd32;} /* This will change the icon color for Active (On) Switch tiles. */
-.switch .icon i.inactive:before {color: #000000;} /* This will change the icon color for Inactive (Off) Switch tiles. */
+.switch .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Switch tiles. */
+.switch .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Off) Switch tiles. */
  
 /* Dimmable Lights */
 .tile.dimmerLight {background-color: black;} /* This will change the background color for Dimmable Light tiles. */
-.dimmerLight .icon i.active:before {color: #32cd32;} /* This will change the icon color for Active (On) Dimmable Light tiles. */
-.dimmerLight .icon i.inactive:before {color: #000000;} /* This will change the icon color for Inactive (Off) Dimmable Light tiles. */
+.dimmerLight .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Dimmable Light tiles. */
+.dimmerLight .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Off) Dimmable Light tiles. */
 
 /* Water Sensors */
 .tile.water {background-color: white;} /* This will change the background color for Water tiles. */
@@ -123,18 +124,18 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .lock .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Unlocked) Lock tiles. */
  
 /* Presence Sensors */
-.tile.presence {background-color: white;} /* This will change the background color for Presence tiles. */
+.tile.presence {background-color: black;} /* This will change the background color for Presence tiles. */
 .presence .icon i.active:before {content : url(http://cdn.device-icons.smartthings.com/People/people1-icn@2x.png); position: relative; top: 27px; left: -18px;} /* This will change the icon to a custom icon for when Presence is detected. This icon is from SmartThings. */
-.presence .icon i.inactive:before {color: #9F792C; content : " "; color: gray;} /* This will change the icon to a custom Font Awesome icon and to the color specified when Presence is not detected (Away). */
+.presence .icon i.inactive:before {color: #2C3937; content : " "; color: gray;} /* This will change the icon to a custom Font Awesome icon and to the color specified when Presence is not detected (Away). */
  
 /* Battery Tiles - Basic. For more battery customization, please scroll down. */
-.tile.battery {background-color: blue;} /* This will change the background color for Battery Tiles. */
-.battery .icon {color: FF0000;} /* This will change the color of the icon (text representation of battery percentage) for Battery Tiles. This can also be configured to change color based on the data value (See below example for Temperature Sensor). */
+.tile.battery {background-color: Black;} /* This will change the background color for Battery Tiles. */
+.battery .icon {color: LIME;} /* This will change the color of the icon (text representation of battery percentage) for Battery Tiles. This can also be configured to change color based on the data value (See below example for Temperature Sensor). */
 .batt svg {
 width: 16px;
 height: 16px;
 transform: rotate(270deg);} /* This will change the width, height, and orientation of the battery icon in the bottom left corner of a Battery Tile. */
-.batt path {fill: white;} /* This will change the color of the battery fill (small bars representing battery level). */
+.batt path {fill: LIME;} /* This will change the color of the battery fill (small bars representing battery level). */
  
 /* Temperature Sensor Text Color Based on Data Value (Temperature Reading) */
 .temperature[data-value='140°'] .icon {color: #FF0040}
@@ -271,10 +272,10 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 .music .ui-slider.ui-mini{padding:0 10px 10px 40px}
 .ui-slider.ui-mini{padding:0 10px 10px 12px}
 .ui-page-theme-a .tile.active .ui-slider-track .ui-btn-active {background-color: white} /* active left slider bar */
-.ui-page-theme-a .ui-slider-track .ui-btn-active {background-color:#666666} /* inactive left slider bar */
-.ui-slider-handle.ui-btn.ui-shadow {background-color: #666666} /* inactive slider button */
+.ui-page-theme-a .ui-slider-track .ui-btn-active {background-color:#2C3937} /* inactive left slider bar */
+.ui-slider-handle.ui-btn.ui-shadow {background-color: #2C3937} /* inactive slider button */
 .tile.active .ui-slider-handle.ui-btn.ui-shadow {background-color: white} /* active slider button */
-.ui-page-theme-a .ui-bar-inherit {background-color: #666666} /* inactive right slider bar */
+.ui-page-theme-a .ui-bar-inherit {background-color: #2C3937} /* inactive right slider bar */
 .ui-page-theme-a .tile.active .ui-bar-inherit {background-color: white}
  
 /* ICON OPACITY */
@@ -310,15 +311,15 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 .battery[data-value^='4'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='5'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
 .battery[data-value^='5'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
-.battery[data-value^='6'] .icon {color: #32CD32} /* Changes battery value color based on percentage */
+.battery[data-value^='6'] .icon {color: LIME} /* Changes battery value color based on percentage */
 .battery[data-value^='6'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
-.battery[data-value^='7'] .icon {color: #32CD32} /* Changes battery value color based on percentage */
+.battery[data-value^='7'] .icon {color: LIME} /* Changes battery value color based on percentage */
 .battery[data-value^='7'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
-.battery[data-value^='8'] .icon {color: #32CD32} /* Changes battery value color based on percentage */
+.battery[data-value^='8'] .icon {color: LIME} /* Changes battery value color based on percentage */
 .battery[data-value^='8'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
-.battery[data-value^='9'] .icon {color: #32CD32} /* Changes battery value color based on percentage */
+.battery[data-value^='9'] .icon {color: LIME} /* Changes battery value color based on percentage */
 .battery[data-value^='9'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
-.battery[data-value^='10'] .icon {color: #32CD32} /* Changes battery value color based on percentage */
+.battery[data-value^='10'] .icon {color: LIME} /* Changes battery value color based on percentage */
 .battery[data-value^='10'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
  
 /* Battery - Changes battery icon to Font Awesome battery icons and changes color and fill amount based on percentage */
@@ -350,7 +351,7 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 /* This example will show using Font Awesome icons. */
  
 /* My Light Switch */
-.tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: #464646} /* This will change the background color for the specific switch tile whose device ID matches the data-device you enter. */
+.tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: LIME} /* This will change the background color for the specific switch tile whose device ID matches the data-device you enter. */
 .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: " ";} /* This will change the Active Switch to the Font Awesome icon selected. A color tag can also be added. */
 .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: " ";} /* This will change the Inactive Switch to the Font Awesome icon selected. A color tag can also be added. */
  
@@ -359,7 +360,7 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 /* My Dimmable Light */
 .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: white;} /* This will change the background color for the specific Dimmable Light tile whose device ID matches the data-device you enter. */
 .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: url(http://cdn.device-icons.smartthings.com/Lighting/light11-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Active (On) Icon to match the URL and also adjust its location to be centered. */
-.tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {{content: url(http://cdn.device-icons.smartthings.com/Lighting/light20-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Inactive (Off) Icon to match the URL and also adjust its location to be centered. */
+.tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: url(http://cdn.device-icons.smartthings.com/Lighting/light20-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Inactive (Off) Icon to match the URL and also adjust its location to be centered. */
  
 /* This example will show using a Custom Icon URL for Active and using the default icon for Inactive. */
  
