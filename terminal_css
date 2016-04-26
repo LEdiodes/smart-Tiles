@@ -1,6 +1,6 @@
 /* BEGIN CUSTOM CSS */
 /* Main Tile Parts */
-.title {color: LIME;} /* Title is the text at the top of the tiles */
+.title {color: #bdbdbd;} /* Title is the text at the top of the tiles---was #bdbdbd which is a dark dark grey - nearly Black*/
 .footer {color: LIME;} /* Footer is the text at the bottom of the tiles and includes the thermometer icon for Temperature tiles */
  
 /* Pop-Up Menus */
@@ -11,13 +11,13 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
  
 /* Modes using Font Awesome */
 /* Although all you see is a box here, this is actually a Font Awesome icon. You can put any Font Awesome icon from the cheatsheet in here and have it displayed. It goes in between the 2 sets of double quotes. */
-.icon.Home i::before {content: " ";} 
-.icon.Away i::before {content: " ";}
-.icon.Night i::before {content: " ";}
-.mode.Away .fa {color: Green;} /* This will change the color for your Font Awesome icons. You can change it per mode. */
+.icon.Home i::before {content: "";} 
+.icon.Away i::before {content: "";}
+.icon.Night i::before {content: "";}
+.mode.Away .fa {color: Lime;} /* This will change the color for your Font Awesome icons. You can change it per mode. */
 .mode.Home .fa {color: LIME;}
-.mode.Night .fa {color: Black;}
- 
+.mode.Night .fa {color: lime}
+
 /* Modes using Custom Pic URLs */
 .icon.Home i::before {content: url(http://www.yourdomainhere);} /* You can use images instead of Font Awesome icons. If the icons are not centered, you can use the code on the next line to move it around. */
 .icon.Away i::before {content: url(http://www.yourdomainhere); position: relative; left: -18px; top: 20px;} /* The extra code here is for adjusting position of the icon. It references left and top locations and is counted in pixels (px). */
@@ -31,8 +31,8 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 /* Power Meters */
 .power .icon {color: lime;} /* Although this says icon, by default this is the text in the center of the power meter tile. */
 .power .fa {color: lime;} /* This will change the color of the Font Awesome icon (lightning bolt) for your power meters. */
-.power.inactive {background-color:#2C3937;} /* This will set the background color of any Active power meter to the color specified. */
-.power[data-value='0W'] {background-color: black;} /* This will set the background color of any power meter that has a data value of 0W (inactive) to the color specified. */
+.power.inactive {background-color: black;} /* This will set the background color of any Active power meter to the color specified. */
+.power[data-value='0W'] {background-color: Black;} /* This will set the background color of any power meter that has a data value of 0W (inactive) to the color specified. */
  
 /* Energy Meters */
 .tile.energy {background-color: white;} /* This will set the background color for all energy meter tiles to the specified color. */
@@ -40,25 +40,25 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .energy .fa {color: #D7A22A;} /* This will change the color of the Font Awesome icon (double lightning bolt) for your energy meter tiles. */
  
 /* Other Dashboards */
-.tile.dashboard {background-color: black;} /* This will change the background color for other Linked Dashboards. */
+.tile.dashboard {background-color: Black;} /* This will change the background color for other Linked Dashboards. */
 .tile.dashboard .fa {color: LIME;} /* This will change the Font Awesome icon color for other Linked Dashboards. */
  
 /* Routines */
-.hello-home .icon {color: black;} /* This will change the background color for Routines (formerly called Hello-Home phrases). */
+.hello-home .icon {background-color: Black;} /* This will change the background color for Routines (formerly called Hello-Home phrases). */
 .hello-home .fa {color: LIME;} /* This will change the icon color for Routines. */
-.hello-home.inactive {background-color: LIME;}
+.hello-home.inactive {background-color: Black;}
  
 /* Link */
 .tile.link {background-color: white;} /* This will change the background color for external weblinks. */
 .link .icon {color: LIME;} /* This will change the icon color for external weblinks. */
  
 /* Refresh */
-.tile.refresh {background-color: black;} /* This will change the background color for the Refresh tile. */
+.tile.refresh {background-color: Black;} /* This will change the background color for the Refresh tile. */
 .refresh .icon {color: LIME;} /* This will change the icon color for the Refresh tile. */
 .refresh .fa {color: LIME;} /* This will change the Font Awesome icon color for the Refresh tile. */
  
 /* Clock */
-.tile.clock {background-color: black;} /* This will change the background color for the Clock tile. */
+.tile.clock {background-color: Black;} /* This will change the background color for the Clock tile. */
 .clock .icon {color: LIME;} /* This will change the icon color for the Clock tile. */
  
 /* History */
@@ -71,14 +71,15 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .weather .fa {color: #D7A22A;} /* This will change the Font Awesome icon color for a Smartweather Tile. This includes things like the Umbrella. */
  
 /* Camera */
-.tile.camera {background-color: black;} /* This will change the background color for Camera tiles. Note that this is NOT for video cameras, but for cameras that can take a still photo when the tile is pressed. */
+.tile.camera {background-color: Black;} /* This will change the background color for Camera tiles. Note that this is NOT for video cameras, but for cameras that can take a still photo when the tile is pressed. */
 .camera .icon {color: LIME;} /* This will change the icon color for Camera tiles. */
  
 /* Temperature */
-.tile.temperature {background-color: black;} /* This will change the icon color for Temperature sensor tiles. Further down is a guide for changing the color of the text based on the data value (temperature display). */
- 
+.tile.temperature {background-color: Black;} /* This will change the icon color for Temperature sensor tiles. Further down is a guide for changing the color of the text based on the data value (temperature display). */
+.tile.temperature.switch.tile.active {background-color: Black;}
+
 /* Smart Home Monitor */
-.tile.alarm {background-color: black;} /* This will change the background color for Smart Home Monitor. */
+.tile.alarm {background-color: Black;} /* This will change the background color for Smart Home Monitor. */
 .alarm[data-status="away"] .icon i.active:before {color: #FF0000;}     /* This will change the icon color for Armed (Away) mode. */
 .alarm[data-status="stay"] .icon i.active:before {color: blue;}        /* This will change the icon color for Armed (Stay) mode. */
 .alarm[data-status="off"] .icon i.inactive:before {color: LIME;}    /* This will change the icon color for Disarmed mode. */
@@ -89,27 +90,27 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .contact .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Closed) Contact Sensor tiles. */
  
 /* Motion Sensors */
-.tile.motion {background-color: black;} /* This will change the background color for Motion Sensor tiles. */
+.tile.motion {background-color: Black;} /* This will change the background color for Motion Sensor tiles. */
 .motion .icon i.active:before {color: LIME;} /* This will change the icon color for Active (Motion Active) Motion Sensor tiles. */
 .motion .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Motion Inactive) Motion Sensor tiles. */
  
 /* Accelerometers */
-.tile.acceleration {background-color: black;} /* This will change the background color for Accelerometer (Vibration) sensor tiles. */
+.tile.acceleration {background-color: Black;} /* This will change the background color for Accelerometer (Vibration) sensor tiles. */
 .acceleration .icon i.active:before {color: LIME;} /* This will change the icon color for Active (Vibration detected) Accelerometer sensor tiles. */
 .acceleration .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Vibration not detected) Accelerometer sensor tiles. */
  
 /* Lights */
-.tile.light {background-color: black;} /* This will change the background color for Light tiles. */
+.tile.light {background-color: Black;} /* This will change the background color for Light tiles. */
 .light .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Light tiles. */
-.light .icon i.inactive:before {color: #FFFFFF;} /* This will change the icon color for Inactive (Off) Light tiles. */
+.light .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Off) Light tiles. */
  
 /* Switches */
-.tile.switch {background-color: black;} /* This will change the background color for Switch tiles. */
+.tile.switch {background-color: Black;} /* This will change the background color for Switch tiles. */
 .switch .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Switch tiles. */
 .switch .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Off) Switch tiles. */
  
 /* Dimmable Lights */
-.tile.dimmerLight {background-color: black;} /* This will change the background color for Dimmable Light tiles. */
+.tile.dimmerLight {background-color: Black;} /* This will change the background color for Dimmable Light tiles. */
 .dimmerLight .icon i.active:before {color: LIME;} /* This will change the icon color for Active (On) Dimmable Light tiles. */
 .dimmerLight .icon i.inactive:before {color: #2C3937;} /* This will change the icon color for Inactive (Off) Dimmable Light tiles. */
 
@@ -124,7 +125,7 @@ font-size:40px;} /* This will increase the pop-up menu size and also increase th
 .lock .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Unlocked) Lock tiles. */
  
 /* Presence Sensors */
-.tile.presence {background-color: black;} /* This will change the background color for Presence tiles. */
+.tile.presence {background-color: Black;} /* This will change the background color for Presence tiles. */
 .presence .icon i.active:before {content : url(http://cdn.device-icons.smartthings.com/People/people1-icn@2x.png); position: relative; top: 27px; left: -18px;} /* This will change the icon to a custom icon for when Presence is detected. This icon is from SmartThings. */
 .presence .icon i.inactive:before {color: #2C3937; content : " "; color: gray;} /* This will change the icon to a custom Font Awesome icon and to the color specified when Presence is not detected (Away). */
  
@@ -271,13 +272,41 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 /* SLIDERS */
 .music .ui-slider.ui-mini{padding:0 10px 10px 40px}
 .ui-slider.ui-mini{padding:0 10px 10px 12px}
-.ui-page-theme-a .tile.active .ui-slider-track .ui-btn-active {background-color: white} /* active left slider bar */
-.ui-page-theme-a .ui-slider-track .ui-btn-active {background-color:#2C3937} /* inactive left slider bar */
-.ui-slider-handle.ui-btn.ui-shadow {background-color: #2C3937} /* inactive slider button */
-.tile.active .ui-slider-handle.ui-btn.ui-shadow {background-color: white} /* active slider button */
+.ui-page-theme-a .tile.active .ui-slider-track .ui-btn-active {background-color: Lime} /* active left slider bar */
+.ui-page-theme-a .ui-slider-track .ui-btn-active {background-color:#111111} /* inactive left slider bar */
+.ui-slider-handle.ui-btn.ui-shadow {background-color: #111111} /* inactive slider button */
+.tile.active .ui-slider-handle.ui-btn.ui-shadow {background-color: #2C3937} /* active slider button */
 .ui-page-theme-a .ui-bar-inherit {background-color: #2C3937} /* inactive right slider bar */
-.ui-page-theme-a .tile.active .ui-bar-inherit {background-color: white}
+.ui-page-theme-a .tile.active .ui-bar-inherit {background-color: #100001}
  
+
+    /* Change THERMOSTAT tile color for operating-state [idle/heat/cool] */
+    .thermostatCool.tile[data-operating-state='cooling'] {background-color: #99ccff;}
+    .thermostatHeat.tile[data-operating-state='heating'] {background-color: #ff6666;}
+
+/* Change THERMOSTAT Detail Colors HEAT */  /* Optional THERMOSTAT Background Color *//*.thermostatCool.tile {background-color: blue;} .thermostatHeat.tile {background-color: red;}*/
+    .thermostatHeat .icon.up, .thermostatCool .icon.up {margin-top: -2.25em; font-size:1.6em; line-height:1.6em;}
+    .thermostatHeat .icon.down, .thermostatCool .icon.down {margin-top: 0.25em; font-size:1.6em; line-height:1.6em;}
+    /*  .thermostatHeat.tile is one word not two! */
+    .thermostatHeat.tile {background-color: Black;}
+    .thermostatHeat .icon {margin-top: -1.0em; font-size:2em; line-height:1.8em; align: center; color:Lime; }
+    .thermostatHeat .title  {font-size: 0.95em; line-height: 1.0em; text-align: left;}
+    .thermostatHeat .title2  {color: Lime; font-size: 1.1em; line-height: 1.1em; text-align: left;} 
+    .thermostatHeat .footer .wi-sprinkles {position: relative; left: -7px; top: 4px; font-size: 1.1em; text-align: center;}
+    .thermostatHeat .footer {color: Lime; position: absolute; left: 1px; font-size: 1.0em; text-align: center; line-height:1.3em;}
+    
+/* Change THERMOSTAT Detail Colors COOL */
+
+    .thermostatCool .icon.up, .thermostatCool .icon.up {margin-top: -2.25em; font-size:1.6em; line-height:1.6em;}
+    .thermostatCool .icon.down, .thermostatCool .icon.down {margin-top: 0.25em; font-size:1.6em; line-height:1.6em;}
+    /*  .thermostatCool.tile is one word not two! */
+    .thermostatCool.tile {background-color: Black;}
+    .thermostatCool .icon {margin-top: -1.0em; font-size:2em; line-height:1.8em; align: center; color:Lime; }
+    .thermostatCool .title  {font-size: 0.95em; line-height: 1.0em; text-align: left;}
+    .thermostatCool .title2  {color: Lime; font-size: 1.1em; line-height: 1.1em; text-align: left;} 
+    .thermostatCool .footer .wi-sprinkles {position: relative; left: -7px; top: 4px; font-size: 1.1em; text-align: center;}
+    .thermostatCool .footer {color: Lime; position: absolute; left: 1px; font-size: 1.0em; text-align: center; line-height:1.3em;}
+
 /* ICON OPACITY */
 .fa-toggle-off {opacity: 1!important} /* Icons no longer transparent */
 .fa-toggle-on {opacity: 1!important} /* Icons no longer transparent */
@@ -287,7 +316,7 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 .fa-lightbulb-o {opacity: 1!important} /* Icons no longer transparent */
 .fa-tint {opacity: 1!important} /* Icons no longer transparent */
 .fa-exchange {opacity: 1!important} /* Icons no longer transparent */
- 
+
 /* WEATHER */
 .weather[data-weather='mostlycloudy'] {background-color: #D3D3D3} /* Changes the tile background color based on mostly-cloudy conditions */
 .weather[data-weather='nt_partlycloudy'] {background-color: #D3D3D3} /* Changes the tile background color based on partly-cloudy conditions */
@@ -302,25 +331,25 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 .battery[data-value^='0'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
 .battery[data-value^='0'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='1'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
-.battery[data-value^='1'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='1'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='2'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
-.battery[data-value^='2'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='2'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='3'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-.battery[data-value^='3'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='3'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='4'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-.battery[data-value^='4'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='4'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='5'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-.battery[data-value^='5'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='5'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='6'] .icon {color: LIME} /* Changes battery value color based on percentage */
-.battery[data-value^='6'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='6'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='7'] .icon {color: LIME} /* Changes battery value color based on percentage */
-.battery[data-value^='7'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='7'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='8'] .icon {color: LIME} /* Changes battery value color based on percentage */
-.battery[data-value^='8'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='8'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='9'] .icon {color: LIME} /* Changes battery value color based on percentage */
-.battery[data-value^='9'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='9'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
 .battery[data-value^='10'] .icon {color: LIME} /* Changes battery value color based on percentage */
-.battery[data-value^='10'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)}} /* Changes battery icon in footer based on percentage */
+.battery[data-value^='10'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
  
 /* Battery - Changes battery icon to Font Awesome battery icons and changes color and fill amount based on percentage */
 .battery[data-value^='0'] .batt:after {content:""; color: #FA0000}
@@ -363,11 +392,10 @@ transform: rotate(270deg);} /* This will change the width, height, and orientati
 .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: url(http://cdn.device-icons.smartthings.com/Lighting/light20-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Inactive (Off) Icon to match the URL and also adjust its location to be centered. */
  
 /* This example will show using a Custom Icon URL for Active and using the default icon for Inactive. */
- 
+
 /* Vacuum Cleaner */
-.tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: #464646} /* This will change the background color for the specific Switch tile whose device ID matches the data-device you enter. */
+.tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: Black} /* This will change the background color for the specific Switch tile whose device ID matches the data-device you enter. */
 .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: url(http://cdn.device-icons.smartthings.com/Appliances/appliances13-icn@2x.png);} /* This will change the Active (On) Switch icon to match the URL image. */
 .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: " ";} /* This will change the Inactive (Off) Switch icon to match the Font Awesome icon. A color tag may be added. */
- 
  
 /* END CUSTOM CSS */
