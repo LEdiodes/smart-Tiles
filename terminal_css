@@ -1,13 +1,11 @@
 /* BEGIN CUSTOM CSS */
+/* fontawesome - copy icon not the name or the URL things - http://fontawesome.io/cheatsheet/ */
 /* Main Tile Parts */
                     .title {color: #bdbdbd;} /* Title is the text at the top of the tiles---was #bdbdbd which is a dark dark grey - nearly Black*/
                     .footer {color: LIME;} /* Footer is the text at the bottom of the tiles and includes the thermometer icon for Temperature tiles */
  
 /* Pop-Up Menus */
-                    .ui-li-static {
-                    height:200px;
-                    width:300px;
-                    font-size:24px;} /* This will increase the pop-up menu size and also increase the text in it. These menus are used for Mode selection and Routines. */
+                    .ui-li-static { height:200px; width:300px; font-size:24px;} /* This will increase the pop-up menu size and also increase the text in it. These menus are used for Mode selection and Routines. */
  
 /* Modes using Font Awesome */
 /* Although all you see is a box here, this is actually a Font Awesome icon. You can put any Font Awesome icon from the cheatsheet in here and have it displayed. It goes in between the 2 sets of double quotes. */
@@ -16,17 +14,12 @@
                     .icon.Night i::before {content: "";}
                     .mode.Away .fa {color: Lime;} /* This will change the color for your Font Awesome icons. You can change it per mode. */
                     .mode.Home .fa {color: LIME;}
-                    .mode.Night .fa {color: lime}
-
-/* Modes using Custom Pic URLs */
-/*                    .icon.Home i::before {content: url(http://www.yourdomainhere);} /* You can use images instead of Font Awesome icons. If the icons are not centered, you can use the code on the next line to move it around. */
-                    .icon.Away i::before {content: url(http://www.yourdomainhere); position: relative; left: -18px; top: 20px;} /* The extra code here is for adjusting position of the icon. It references left and top locations and is counted in pixels (px). */
-                    .icon.Night i::before {content: url(http://www.yourdomainhere);}
-*/ 
+                    .mode.Night .fa {color: lime}                 
+                  
 /* Non-specific tile changes. Note: These will change ALL tiles of that type. Look further down to find out how to change specific individual tiles of a certain type. You can add the code for content to any of these items and it will change the content for ALL devices of that specific type. My example will have it only for Other Dashboards. I will also have an example on the Presence sensor tile showing you can have one type of content for Active and a different for Inactive. */
  
 /* Change Title Color When Active */
-                    .switch.tile.active .title { color: lime;}  /*This will change the Title on the given tile type to the color specified only when active. This could be used with other tile types that show On/Off or Active/Inactive such as lights, dimmerlights, dimmers, motion, power meters, etc. */
+                  .switch.tile.active .title { color: lime;}  /*This will change the Title on the given tile type to the color specified only when active. This could be used with other tile types that show On/Off or Active/Inactive such as lights, dimmerlights, dimmers, motion, power meters, etc. */
  
 /* Power Meters */
                     .power .icon {color: lime;} /* Although this says icon, by default this is the text in the center of the power meter tile. */
@@ -66,9 +59,9 @@
                     .history .icon {color: LIME;} /* This will change the icon color for the Event History tile. */
  
 /* Weather - Basic. For more advanced weather control, please scroll down. */
-                    .tile.weather {background-color: white;} /* This will change the background color for a Smartweather Tile. */
-                    .weather .icon {color: #D7A22A;} /* This will change the icon color for a Smartweather Tile. */
-                    .weather .fa {color: #D7A22A;} /* This will change the Font Awesome icon color for a Smartweather Tile. This includes things like the Umbrella. */
+                    .tile.weather {background-color: #090909;} /* This will change the background color for a Smartweather Tile. */
+                    .weather .icon {color: Lime;} /* This will change the icon color for a Smartweather Tile. */
+                    .weather .fa {color: #090909;} /* This will change the Font Awesome icon color for a Smartweather Tile. This includes things like the Umbrella. */
  
 /* Camera */
                     .tile.camera {background-color: #090909;} /* This will change the background color for Camera tiles. Note that this is NOT for video cameras, but for cameras that can take a still photo when the tile is pressed. */
@@ -125,9 +118,14 @@
                     .lock .icon i.inactive:before {color: #9F792C;} /* This will change the icon color for Inactive (Unlocked) Lock tiles. */
  
 /* Presence Sensors */
-                    .tile.presence {background-color: #090909;} /* This will change the background color for Presence tiles. */
+              /*      .tile.presence {background-color: #090909;} /* This will change the background color for Presence tiles. */
                  /*   .presence .icon i.active:before {color: black; content : " "; color: white;} /* {content : url(http://cdn.device-icons.smartthings.com/People/people1-icn@2x.png); position: relative; top: 27px; left: -18px;}*//* This will change the icon to a custom icon for when Presence is detected. This icon is from SmartThings. */
                 /*    .presence .icon i.inactive:before {color: black; content : " "; color: white;} /* This will change the icon to a custom Font Awesome icon and to the color specified when Presence is not detected (Away). */
+ 
+ /* Presence Sensors */
+.tile.presence {background-color: #090909;}
+.presence .icon i.active:before {color: black; content : " "; color: white; position: relative; top: 27px; left: -18px;}
+.presence .icon i.inactive:before {color: black; content : "" ; color: #2C3937;}
  
 /* Battery Tiles - Basic. For more battery customization, please scroll down. */
                     .tile.battery {background-color: #090909;} /* This will change the background color for Battery Tiles. */
@@ -137,8 +135,7 @@
                     height: 16px;
                     transform: rotate(270deg);} /* This will change the width, height, and orientation of the battery icon in the bottom left corner of a Battery Tile. */
                     .batt path {fill: LIME;} /* This will change the color of the battery fill (small bars representing battery level). */
- 
- 
+                    
 /* SLIDERS */
                     .music .ui-slider.ui-mini{padding:0 10px 10px 40px}
                     .ui-slider.ui-mini{padding:0 10px 10px 12px}
@@ -152,6 +149,9 @@
 /* Change THERMOSTAT tile color for operating-state [idle/heat/cool] */
                     .thermostatCool.tile[data-operating-state='cooling'] {background-color: #0F0FFF;}
                     .thermostatHeat.tile[data-operating-state='heating'] {background-color: #FF0000;}
+
+
+
 
 /* Change THERMOSTAT Detail Colors HEAT */  /* Optional THERMOSTAT Background Color *//*.thermostatCool.tile {background-color: blue;} .thermostatHeat.tile {background-color: red;}*/
                     .thermostatHeat .icon.up, .thermostatCool .icon.up {margin-top: -2.25em; font-size:1.6em; line-height:1.6em;}
@@ -186,16 +186,6 @@
                     .fa-tint {opacity: 1!important} /* Icons no longer transparent */
                     .fa-exchange {opacity: 1!important} /* Icons no longer transparent */
 
-/* WEATHER */
-                    .weather[data-weather='mostlycloudy'] {background-color: #D3D3D3} /* Changes the tile background color based on mostly-cloudy conditions */
-                    .weather[data-weather='nt_partlycloudy'] {background-color: #D3D3D3} /* Changes the tile background color based on partly-cloudy conditions */
-                    .weather[data-weather='cloudy'] {background-color: #D3D3D3} /* Changes the tile background color based on cloudy conditions */
-                    .weather[data-weather='fog'] {background-color: #D3D3D3} /* Changes the tile background color based on fog conditions */
-                    .weather[data-weather='rain'] {background-color: #6666CE} /* Changes the tile background color based on rain conditions */
-                    .weather[data-weather='clear'] {background-color: #FFD700} /* Changes the tile background color based on clear conditions */
-                    .weather[data-weather='sunny'] {background-color: #FFD700} /* Changes the tile background color based on sunny conditions */
-                    .weather[data-weather='snow'] {background-color: #FFFFFF} /* Changes the tile background color based on snow conditions */
- 
 /* Temperature Sensor Text Color Based on Data Value (Temperature Reading) */
                     .temperature[data-value='140°'] .icon {color: #FF0040}
                     .temperature[data-value='139°'] .icon {color: #FF0038}
@@ -238,122 +228,122 @@
                     .temperature[data-value='102°'] .icon {color: #FF9600}
                     .temperature[data-value='101°'] .icon {color: #FF9B00}
                     .temperature[data-value='100°'] .icon {color: #FFA000}
-                    .temperature[data-value='99°'] .icon {color: #FFA500}
-                    .temperature[data-value='98°'] .icon {color: #FFAA00}
-                    .temperature[data-value='97°'] .icon {color: #FFAF00}
-                    .temperature[data-value='96°'] .icon {color: #FFB400}
-                    .temperature[data-value='95°'] .icon {color: #FFB900}
-                    .temperature[data-value='94°'] .icon {color: #FFBE00}
-                    .temperature[data-value='93°'] .icon {color: #FFC300}
-                    .temperature[data-value='92°'] .icon {color: #FFC800}
-                    .temperature[data-value='91°'] .icon {color: #FFCD00}
-                    .temperature[data-value='90°'] .icon {color: #FFD200}
-                    .temperature[data-value='89°'] .icon {color: #FFD700}
-                    .temperature[data-value='88°'] .icon {color: #FFDC00}
-                    .temperature[data-value='87°'] .icon {color: #FFE100}
-                    .temperature[data-value='86°'] .icon {color: #FFE600}
-                    .temperature[data-value='85°'] .icon {color: #FFEB00}
-                    .temperature[data-value='84°'] .icon {color: #FFF000}
-                    .temperature[data-value='83°'] .icon {color: #FFF500}
-                    .temperature[data-value='82°'] .icon {color: #FFFA00}
-                    .temperature[data-value='81°'] .icon {color: #FEFC00}
-                    .temperature[data-value='80°'] .icon {color: #FDFF00}
-                    .temperature[data-value='79°'] .icon {color: #EAFF00}
-                    .temperature[data-value='78°'] .icon {color: #D7FF00}
-                    .temperature[data-value='77°'] .icon {color: #C3FF00}
-                    .temperature[data-value='76°'] .icon {color: #B0FF00}
-                    .temperature[data-value='75°'] .icon {color: #9DFF00}
-                    .temperature[data-value='74°'] .icon {color: #8AFF00}
-                    .temperature[data-value='73°'] .icon {color: #77FF00}
-                    .temperature[data-value='72°'] .icon {color: #65FF00}
-                    .temperature[data-value='71°'] .icon {color: #51FF00}
-                    .temperature[data-value='70°'] .icon {color: #3EFF00}
-                    .temperature[data-value='69°'] .icon {color: #2AFF00}
-                    .temperature[data-value='68°'] .icon {color: #17FF00}
-                    .temperature[data-value='67°'] .icon {color: #0BFF08}
-                    .temperature[data-value='66°'] .icon {color: #00FF10}
-                    .temperature[data-value='65°'] .icon {color: #00FF23}
-                    .temperature[data-value='64°'] .icon {color: #00FF36}
-                    .temperature[data-value='63°'] .icon {color: #00FF49}
-                    .temperature[data-value='62°'] .icon {color: #00FF5C}
-                    .temperature[data-value='61°'] .icon {color: #00FF6F}
-                    .temperature[data-value='60°'] .icon {color: #00FF83}
-                    .temperature[data-value='59°'] .icon {color: #00FF95}
-                    .temperature[data-value='58°'] .icon {color: #00FFA8}
-                    .temperature[data-value='57°'] .icon {color: #00FFBC}
-                    .temperature[data-value='56°'] .icon {color: #00FFD0}
-                    .temperature[data-value='55°'] .icon {color: #00FFE2}
-                    .temperature[data-value='54°'] .icon {color: #00FFF4}
-                    .temperature[data-value='53°'] .icon {color: #00F1F9}
-                    .temperature[data-value='52°'] .icon {color: #00E4FF}
-                    .temperature[data-value='51°'] .icon {color: #00DCFF}
-                    .temperature[data-value='50°'] .icon {color: #00D4FF}
-                    .temperature[data-value='49°'] .icon {color: #00CCFF}
-                    .temperature[data-value='48°'] .icon {color: #00C4FF}
-                    .temperature[data-value='47°'] .icon {color: #00BCFF}
-                    .temperature[data-value='46°'] .icon {color: #00B4FF}
-                    .temperature[data-value='45°'] .icon {color: #00ACFF}
-                    .temperature[data-value='44°'] .icon {color: #00A4FF}
-                    .temperature[data-value='43°'] .icon {color: #009CFF}
-                    .temperature[data-value='42°'] .icon {color: #0094FF}
-                    .temperature[data-value='41°'] .icon {color: #008CFF}
-                    .temperature[data-value='40°'] .icon {color: #0084FF}
-                    .temperature[data-value='39°'] .icon {color: #007CFF}
-                    .temperature[data-value='38°'] .icon {color: #0074FF}
-                    .temperature[data-value='37°'] .icon {color: #006CFF}
-                    .temperature[data-value='36°'] .icon {color: #0064FF}
-                    .temperature[data-value='35°'] .icon {color: #005CFF}
-                    .temperature[data-value='34°'] .icon {color: #0054FF}
-                    .temperature[data-value='33°'] .icon {color: #004CFF}
-                    .temperature[data-value='32°'] .icon {color: #0044FF}
-                    .temperature[data-value='31°'] .icon {color: #003BFF}
-                    .temperature[data-value='30°'] .icon {color: #0032FF}
-                    .temperature[data-value='29°'] .icon {color: #002AFF}
-                    .temperature[data-value='28°'] .icon {color: #0022FF}
-                    .temperature[data-value='27°'] .icon {color: #001AFF}
-                    .temperature[data-value='26°'] .icon {color: #0012FF}
-                    .temperature[data-value='25°'] .icon {color: #000AFF}
-                    .temperature[data-value='24°'] .icon {color: #0002FF}
-                    .temperature[data-value='23°'] .icon {color: #0001FF}
-                    .temperature[data-value='22°'] .icon {color: #0000FF}
-                    .temperature[data-value='21°'] .icon {color: #0000FF}
-                    .temperature[data-value='20°'] .icon {color: #0100FF}
-                    .temperature[data-value='19°'] .icon {color: #0100FF}
-                    .temperature[data-value='18°'] .icon {color: #0200FF}
-                    .temperature[data-value='17°'] .icon {color: #0200FF}
-                    .temperature[data-value='16°'] .icon {color: #0300FF}
-                    .temperature[data-value='15°'] .icon {color: #0300FF}
-                    .temperature[data-value='14°'] .icon {color: #0400FF}
-                    .temperature[data-value='13°'] .icon {color: #0400FF}
-                    .temperature[data-value='12°'] .icon {color: #0500FF}
+                     .temperature[data-value='99°'] .icon {color: #FFA500}
+                     .temperature[data-value='98°'] .icon {color: #FFAA00}
+                     .temperature[data-value='97°'] .icon {color: #FFAF00}
+                     .temperature[data-value='96°'] .icon {color: #FFB400}
+                     .temperature[data-value='95°'] .icon {color: #FFB900}
+                     .temperature[data-value='94°'] .icon {color: #FFBE00}
+                     .temperature[data-value='93°'] .icon {color: #FFC300}
+                     .temperature[data-value='92°'] .icon {color: #FFC800}
+                     .temperature[data-value='91°'] .icon {color: #FFCD00}
+                     .temperature[data-value='90°'] .icon {color: #FFD200}
+                     .temperature[data-value='89°'] .icon {color: #FFD700}
+                     .temperature[data-value='88°'] .icon {color: #FFDC00}
+                     .temperature[data-value='87°'] .icon {color: #FFE100}
+                     .temperature[data-value='86°'] .icon {color: #FFE600}
+                     .temperature[data-value='85°'] .icon {color: #FFEB00}
+                     .temperature[data-value='84°'] .icon {color: #FFF000}
+                     .temperature[data-value='83°'] .icon {color: #FFF500}
+                     .temperature[data-value='82°'] .icon {color: #FFFA00}
+                     .temperature[data-value='81°'] .icon {color: #FEFC00}
+                     .temperature[data-value='80°'] .icon {color: #FDFF00}
+                     .temperature[data-value='79°'] .icon {color: #EAFF00}
+                     .temperature[data-value='78°'] .icon {color: #D7FF00}
+                     .temperature[data-value='77°'] .icon {color: #C3FF00}
+                     .temperature[data-value='76°'] .icon {color: #B0FF00}
+                     .temperature[data-value='75°'] .icon {color: #9DFF00}
+                     .temperature[data-value='74°'] .icon {color: #8AFF00}
+                     .temperature[data-value='73°'] .icon {color: #77FF00}
+                     .temperature[data-value='72°'] .icon {color: #65FF00}
+                     .temperature[data-value='71°'] .icon {color: #51FF00}
+                     .temperature[data-value='70°'] .icon {color: #3EFF00}
+                     .temperature[data-value='69°'] .icon {color: #2AFF00}
+                     .temperature[data-value='68°'] .icon {color: #17FF00}
+                     .temperature[data-value='67°'] .icon {color: #0BFF08}
+                     .temperature[data-value='66°'] .icon {color: #00FF10}
+                     .temperature[data-value='65°'] .icon {color: #00FF23}
+                     .temperature[data-value='64°'] .icon {color: #00FF36}
+                     .temperature[data-value='63°'] .icon {color: #00FF49}
+                     .temperature[data-value='62°'] .icon {color: #00FF5C}
+                     .temperature[data-value='61°'] .icon {color: #00FF6F}
+                     .temperature[data-value='60°'] .icon {color: #00FF83}
+                     .temperature[data-value='59°'] .icon {color: #00FF95}
+                     .temperature[data-value='58°'] .icon {color: #00FFA8}
+                     .temperature[data-value='57°'] .icon {color: #00FFBC}
+                     .temperature[data-value='56°'] .icon {color: #00FFD0}
+                     .temperature[data-value='55°'] .icon {color: #00FFE2}
+                     .temperature[data-value='54°'] .icon {color: #00FFF4}
+                     .temperature[data-value='53°'] .icon {color: #00F1F9}
+                     .temperature[data-value='52°'] .icon {color: #00E4FF}
+                     .temperature[data-value='51°'] .icon {color: #00DCFF}
+                     .temperature[data-value='50°'] .icon {color: #00D4FF}
+                     .temperature[data-value='49°'] .icon {color: #00CCFF}
+                     .temperature[data-value='48°'] .icon {color: #00C4FF}
+                     .temperature[data-value='47°'] .icon {color: #00BCFF}
+                     .temperature[data-value='46°'] .icon {color: #00B4FF}
+                     .temperature[data-value='45°'] .icon {color: #00ACFF}
+                     .temperature[data-value='44°'] .icon {color: #00A4FF}
+                     .temperature[data-value='43°'] .icon {color: #009CFF}
+                     .temperature[data-value='42°'] .icon {color: #0094FF}
+                     .temperature[data-value='41°'] .icon {color: #008CFF}
+                     .temperature[data-value='40°'] .icon {color: #0084FF}
+                     .temperature[data-value='39°'] .icon {color: #007CFF}
+                     .temperature[data-value='38°'] .icon {color: #0074FF}
+                     .temperature[data-value='37°'] .icon {color: #006CFF}
+                     .temperature[data-value='36°'] .icon {color: #0064FF}
+                     .temperature[data-value='35°'] .icon {color: #005CFF}
+                     .temperature[data-value='34°'] .icon {color: #0054FF}
+                     .temperature[data-value='33°'] .icon {color: #004CFF}
+                     .temperature[data-value='32°'] .icon {color: #0044FF}
+                     .temperature[data-value='31°'] .icon {color: #003BFF}
+                     .temperature[data-value='30°'] .icon {color: #0032FF}
+                     .temperature[data-value='29°'] .icon {color: #002AFF}
+                     .temperature[data-value='28°'] .icon {color: #0022FF}
+                     .temperature[data-value='27°'] .icon {color: #001AFF}
+                     .temperature[data-value='26°'] .icon {color: #0012FF}
+                     .temperature[data-value='25°'] .icon {color: #000AFF}
+                     .temperature[data-value='24°'] .icon {color: #0002FF}
+                     .temperature[data-value='23°'] .icon {color: #0001FF}
+                     .temperature[data-value='22°'] .icon {color: #0000FF}
+                     .temperature[data-value='21°'] .icon {color: #0000FF}
+                     .temperature[data-value='20°'] .icon {color: #0100FF}
+                     .temperature[data-value='19°'] .icon {color: #0100FF}
+                     .temperature[data-value='18°'] .icon {color: #0200FF}
+                     .temperature[data-value='17°'] .icon {color: #0200FF}
+                     .temperature[data-value='16°'] .icon {color: #0300FF}
+                     .temperature[data-value='15°'] .icon {color: #0300FF}
+                     .temperature[data-value='14°'] .icon {color: #0400FF}
+                     .temperature[data-value='13°'] .icon {color: #0400FF}
+                     .temperature[data-value='12°'] .icon {color: #0500FF}
  
  
 /* Battery - Changes battery value color based on the percentage and change footer icon to custom icon based on URL */
-                    .battery[data-value^='0'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
-                    .battery[data-value^='0'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='1'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
-                    .battery[data-value^='1'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='2'] .icon {color: #FF0040} /* Changes battery value color based on percentage */
-                    .battery[data-value^='2'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='3'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-                    .battery[data-value^='3'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='4'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-                    .battery[data-value^='4'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='5'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
-                    .battery[data-value^='5'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='6'] .icon {color: LIME} /* Changes battery value color based on percentage */
-                    .battery[data-value^='6'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='7'] .icon {color: LIME} /* Changes battery value color based on percentage */
-                    .battery[data-value^='7'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='8'] .icon {color: LIME} /* Changes battery value color based on percentage */
-                    .battery[data-value^='8'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
-                    .battery[data-value^='9'] .icon {color: LIME} /* Changes battery value color based on percentage */
-                    .battery[data-value^='9'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='0'] .icon {color: #FF0000} /* Changes battery value color based on percentage */
+                     .battery[data-value^='0'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='1'] .icon {color: #FF0020} /* Changes battery value color based on percentage */
+                     .battery[data-value^='1'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='2'] .icon {color: #FF4040} /* Changes battery value color based on percentage */
+                     .battery[data-value^='2'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='3'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
+                     .battery[data-value^='3'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='4'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
+                     .battery[data-value^='4'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='5'] .icon {color: #FFD700} /* Changes battery value color based on percentage */
+                     .battery[data-value^='5'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='6'] .icon {color: LIME} /* Changes battery value color based on percentage */
+                     .battery[data-value^='6'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='7'] .icon {color: LIME} /* Changes battery value color based on percentage */
+                     .battery[data-value^='7'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='8'] .icon {color: LIME} /* Changes battery value color based on percentage */
+                     .battery[data-value^='8'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
+                     .battery[data-value^='9'] .icon {color: LIME} /* Changes battery value color based on percentage */
+                     .battery[data-value^='9'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
                     .battery[data-value^='10'] .icon {color: LIME} /* Changes battery value color based on percentage */
                     .battery[data-value^='10'] .footer {width: 40px;height: 20px;transform: rotate(0deg);padding:105px 0px 0px 0px;content : url(http://www.yourdomainhere)} /* Changes battery icon in footer based on percentage */
  
 /* Battery - Changes battery icon to Font Awesome battery icons and changes color and fill amount based on percentage */
-                    .battery[data-value^='0'] .batt:after {content:""; color: #FA0000}
+                    .battery[data-value^='0'] .batt:after {content:""; color: #FF0000}
                     .battery[data-value^='0'] .batt svg {display: none;}
                     .battery[data-value^='1'] .batt:after {content:""; color: #FB3300}
                     .battery[data-value^='1'] .batt svg {display: none;}
@@ -375,21 +365,12 @@
                     .battery[data-value^='9'] .batt svg {display: none;}
                     .battery[data-value^='10'] .batt:after {content:""; color: #00FF00}
                     .battery[data-value^='10'] .batt svg {display: none;}
-/* Specific Device Tile Manipulation */
-/* Change the tile type to suit the needs based on what device you are using. Then you will add in the device ID between the 2 single quotes (replacing all of the X's). */
-/* This example will show using Font Awesome icons. */
-/* My Light Switch */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: LIME} /* This will change the background color for the specific switch tile whose device ID matches the data-device you enter. */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: " ";} /* This will change the Active Switch to the Font Awesome icon selected. A color tag can also be added. */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: " ";} /* This will change the Inactive Switch to the Font Awesome icon selected. A color tag can also be added. */
-/* This example will show using Custom Icon URLs. */
-/* My Dimmable Light */
-                    .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: white;} /* This will change the background color for the specific Dimmable Light tile whose device ID matches the data-device you enter. */
-                    .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: url(http://cdn.device-icons.smartthings.com/Lighting/light11-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Active (On) Icon to match the URL and also adjust its location to be centered. */
-                    .tile.dimmerLight[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: url(http://cdn.device-icons.smartthings.com/Lighting/light20-icn@2x.png);position: relative; left: -20px; top: 27px;} /* This will change the Inactive (Off) Icon to match the URL and also adjust its location to be centered. */
-/* This example will show using a Custom Icon URL for Active and using the default icon for Inactive. */
-/* Vacuum Cleaner */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] {background-color: Black} /* This will change the background color for the specific Switch tile whose device ID matches the data-device you enter. */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.active:before {content: url(http://cdn.device-icons.smartthings.com/Appliances/appliances13-icn@2x.png);} /* This will change the Active (On) Switch icon to match the URL image. */
-                    .tile.switch[data-device='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'] .icon i.inactive:before {content: " ";} /* This will change the Inactive (Off) Switch icon to match the Font Awesome icon. A color tag may be added. */
+                    
+/* stop-motion videos */ /* goes by 120px */
+                    .tile.video[data-link-i="1"] { width: 480px ; height:360px ; } /* 7 day forecast */
+                    .tile.video[data-link-i="2"] { width: 240px ; height:240px ; } /* nothing */
+                    .tile.video[data-link-i="3"] { width: 240px ; height:240px ; } /* road camera - boone ave -marriot */
+                    .tile.video[data-link-i="5"] { width: 120px ; height:120px ; } /* Nothine */
+                    .tile.video[data-link-i="6"] { width: 240px ; height:180px ; } /*  */
+                    
 /* END CUSTOM CSS */
