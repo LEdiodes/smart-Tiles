@@ -126,6 +126,12 @@
 .tile.presence {background-color: #090909;}
 .presence .icon i.active:before {color: black; content : " "; color: white; position: relative; top: 27px; left: -18px;}
 .presence .icon i.inactive:before {color: black; content : "" ; color: #2C3937;}
+
+
+
+/* TOOLS */
+.tile.tools {background-color: #090909;}
+.tools .icon i.active:before {color: LIME}
  
 /* Battery Tiles - Basic. For more battery customization, please scroll down. */
                     .tile.battery {background-color: #090909;} /* This will change the background color for Battery Tiles. */
@@ -150,13 +156,10 @@
                     .thermostatCool.tile[data-operating-state='cooling'] {background-color: #0F0FFF;}
                     .thermostatHeat.tile[data-operating-state='heating'] {background-color: #FF0000;}
 
-
-
-
 /* Change THERMOSTAT Detail Colors HEAT */  /* Optional THERMOSTAT Background Color *//*.thermostatCool.tile {background-color: blue;} .thermostatHeat.tile {background-color: red;}*/
                     .thermostatHeat .icon.up, .thermostatCool .icon.up {margin-top: -2.25em; font-size:1.6em; line-height:1.6em;}
                     .thermostatHeat .icon.down, .thermostatCool .icon.down {margin-top: 0.25em; font-size:1.6em; line-height:1.6em;}
-    /*  .thermostatHeat.tile is one word not two! */
+/*  .thermostatHeat.tile is one word not two! */
                     .thermostatHeat.tile {background-color: #090909;}
                     .thermostatHeat .icon {margin-top: -1.0em; font-size:2em; line-height:1.8em; align: center; color:Lime; }
                     .thermostatHeat .title  {font-size: 0.95em; line-height: 1.0em; text-align: left;}
@@ -168,7 +171,7 @@
 
                     .thermostatCool .icon.up, .thermostatCool .icon.up {margin-top: -2.25em; font-size:1.6em; line-height:1.6em;}
                     .thermostatCool .icon.down, .thermostatCool .icon.down {margin-top: 0.25em; font-size:1.6em; line-height:1.6em;}
-    /*  .thermostatCool.tile is one word not two! */
+                    /*  .thermostatCool.tile is one word not two! */
                     .thermostatCool.tile {background-color: #090909;}
                     .thermostatCool .icon {margin-top: -1.0em; font-size:2em; line-height:1.8em; align: center; color:Lime; }
                     .thermostatCool .title  {font-size: 0.95em; line-height: 1.0em; text-align: left;}
